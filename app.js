@@ -13,7 +13,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://hellobot-fryn.onrender.com', // Allow this specific origin
+  origin: 'http://localhost:3001', // Allow this specific origin
 }));
 
 app.use(bodyParser.json());
