@@ -1,0 +1,35 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google-cloud/storage": "^7.15.0",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "bull": "^4.16.5",
+    "cheerio": "^1.0.0",
+    "cheero": "^0.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "node-cache": "^5.1.2",
+    "node-summarizer": "^1.0.7",
+    "nodemon": "^3.1.9",
+    "puppeteer": "^24.1.1",
+    "redis": "^4.7.0",
+    "sanitize-html": "^2.14.0",
+    "uuid": "^11.0.5"
+  }
+}
