@@ -13,7 +13,7 @@ router.post('/chat/:userid', handleChat);
 
 router.post('/scrape',authentication,scrapeWebsiteController);
 router.post('/register', registerChatbot)
-router.get('/get',loginChatbot)
+router.post('/get',loginChatbot)
 router.get('/getchats/:chatbot_id' ,handleGetChats)
 // router.post('/t1/chat', handleUserInput);
 // router.post('/t1/scrape', extractWebsiteContent );
