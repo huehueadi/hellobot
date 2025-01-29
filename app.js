@@ -9,21 +9,24 @@ import dotenv from 'dotenv';
 // Load environment variables from the .env file
 dotenv.config();
 
-
-
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://hellobot-fryn.onrender.com', // Allow this specific origin
+}));
+
 app.use(bodyParser.json());
 
 // Database Connection
-connectDB()
+connectDB();
+
 // Routes
 app.use('/v1', router);
-app.use('/',(req, res)=>{
-  res.send("hello world")
-})
+app.use('/', (req, res) => {
+  res.send("hello world");
+});
+
 // Start Server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
