@@ -21,7 +21,9 @@ app.use(bodyParser.json());
 connectDB()
 // Routes
 app.use('/v1', router);
-
+app.use('/',(req, res)=>{
+  res.send("hello world")
+})
 // Start Server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
