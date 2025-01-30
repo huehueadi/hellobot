@@ -4,7 +4,7 @@ import { crawlWebsite, scrapeAllPages, scrapeBodyContent } from '../services/scr
 export const scrapeWebsiteController = async (req, res) => {
   const { url, choice } = req.body;
 
-  if (!req.user || !req.user.userid) {
+  if (!req.user || !req.user.userId) {
     return res.status(400).json({ error: "User not authenticated" });
   }
 

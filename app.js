@@ -13,7 +13,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3001', // Allow this specific origin
+  origin: ['http://localhost:3001', 'http://localhost:3001'] // Allow this specific origin
 }));
 
 app.use(bodyParser.json());
@@ -23,9 +23,9 @@ connectDB();
 
 // Routes
 app.use('/v1', router);
-app.use('/', (req, res) => {
-  res.send("hello world");
-});
+// app.get('/', (req, res) => {
+//   res.send("hello world");
+// });
 
 // Start Server
 const PORT = process.env.PORT || 8080;

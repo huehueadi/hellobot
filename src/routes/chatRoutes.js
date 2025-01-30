@@ -11,7 +11,7 @@ const router = express.Router();
 router.post('/chat/:userid', handleChat);
 // router.post('/chat', generateContentFromUserInput);
 
-router.post('/scrape',authentication,scrapeWebsiteController);
+router.post('/scrape',authentication, scrapeWebsiteController);
 router.post('/register', registerChatbot)
 router.post('/get',loginChatbot)
 router.get('/getchats/:chatbot_id' ,handleGetChats)
